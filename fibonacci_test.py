@@ -18,3 +18,4 @@ def test_fibonacci():
 
     # # Test for large input
     assert fibonacci(30) == 832040
+    assert fibonacci(50) == 12586269025

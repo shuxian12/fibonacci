@@ -1,3 +1,4 @@
+fib = {}
 
 def fibonacci(n : int):
     if n < -1:
@@ -9,7 +10,11 @@ def fibonacci(n : int):
         return 0
     elif n == 1:
         return 1
-    return fibonacci(n - 1) + fibonacci(n - 2)
+    elif n in fib:
+        # print(f"Fibonacci number for {n} is already computed: {fib[n]}")
+        return fib[n]
+    fib[n] = fibonacci(n - 1) + fibonacci(n - 2)
+    return fib[n]
 
 
 if __name__ == "__main__":
